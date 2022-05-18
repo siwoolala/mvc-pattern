@@ -15,7 +15,6 @@ public class MemberController {
 	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
 	
 	
-	
 	@RequestMapping(value = "/join")
 	public String join( ) {
 		return "member/join";
@@ -26,11 +25,11 @@ public class MemberController {
 		return "member/login";
 	}
 	
-	@PostMapping(value = "/joinForm")
+	@RequestMapping(value = "joinMember")
 	public String joinForm(MemberVO vo) throws Exception {
+		logger.debug("========== memberController");
+		logger.debug(vo + "vo 객체");
 		
-		
-		
-		return "index";
+		return "";
 	}
 }

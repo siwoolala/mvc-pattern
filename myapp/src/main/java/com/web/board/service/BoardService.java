@@ -21,16 +21,8 @@ public class BoardService {
 	
 	@Inject
 	private BoardMapper mapper;
-
-	// 1. list
-	public List<BoardVO> list (PageObject pageObject) throws Exception {
-		return mapper.list(pageObject);
-	}
-
-	// 2. view
-	public BoardVO view (long no, int inc) throws Exception {
-		System.out.println("BoardService.view().no, inc -" + no + inc);
-		if(inc == 1) mapper.icrease(no);
-		return mapper.view(no);
-	}
+	/*
+	 * // 1. list public List<BoardVO> list (BoardVO vo) throws Exception { return
+	 * mapper.list(vo); }
+	 */
 }
